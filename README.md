@@ -126,4 +126,4 @@ brew cask install rdio
 brew cask install dropbox
 ```
 
-*NOTE* I used to install chrome via Cask, but it does not play very nice with the App Store version of 1Password (and that version is the only one that works with iCloud syncing). You can still do that if you copy the binary manually to `/Applications`, but these days I think it's simpler to just download the `.dmg` from the website. 
+**NOTE:** I used to install chrome via Cask, but it does not play very nice with the App Store version of 1Password (and that version is the only one that works with iCloud syncing). You can still do that if you copy the binary manually to `/Applications`, but these days I think it's simpler to just download the `.dmg` from the website. 
