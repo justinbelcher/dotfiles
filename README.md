@@ -10,7 +10,7 @@ brew install brew-cask
 ```
 
 #### Install latest ZSH
-OSX used to ship with a pretty old version of zsh. Yosemite ships with a pretty recent version of zsh, but you still probably want to install it yourself so you can keep it up to date. In order to choose the homebrew version of zsh as your shell you'll need to add it to the whitelist at `/etc/shells` first. 
+OSX used to ship with a pretty old version of zsh. Yosemite ships with a more recent version of zsh, but you still probably want to install it yourself so you can keep it up to date. In order to choose the homebrew version of zsh as your shell you'll need to add it to the whitelist at `/etc/shells` first. 
 
 ```bash
 brew install zsh
@@ -106,16 +106,16 @@ cd cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User && touch Pac
     "SublimeLinter-contrib-eslint"
   ]
 }
-
-# replace default settings with provided Preferences.sublime-settings file
 ```
+
+At this point replace the default user preferences with the file contained in this repo.
 
 #### Set up iTerm2
 ```bash
 brew cask install iterm2
-
-# Load settings from repo
 ```
+
+At this point load the iTerm2 settings file contianed in this repo.
 
 #### Set up other standard packages
 ```bash
@@ -125,3 +125,5 @@ brew cask install slack
 brew cask install rdio
 brew cask install dropbox
 ```
+
+*NOTE* I used to install chrome via Cask, but it does not play very nice with the App Store version of 1Password (and that version is the only one that works with iCloud syncing). You can still do that if you copy the binary manually to `/Applications`, but these days I think it's simpler to just download the `.dmg` from the website. 
