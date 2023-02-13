@@ -44,7 +44,6 @@ eval "$(pyenv init -)"
 # vs code
 path+=("/Applications/Visual\ Studio Code.app/Contents/Resources/app/bin")
 
-
 # gCloud CLI
 if [ -f '/Users/justinbelcher/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/justinbelcher/google-cloud-sdk/path.zsh.inc'; fi
 if [ -f '/Users/justinbelcher/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/justinbelcher/google-cloud-sdk/completion.zsh.inc'; fi
