@@ -6,13 +6,13 @@ For a long time I've used heavyweight utilities like [prezto](https://github.com
 
 There are lots of Node version managers, but you're probably best off installing Node with its [official installer](https://nodejs.org/en/download/). Just make sure you configure npm prefix with `npm config set prefix ~/.npm` to avoid needing `sudo` for installs. 
 
-#### Install deps
+#### Install other deps
 
 ```bash
 # pure prompt
 npm install --global pure-prompt
 
-# pyenv
+# pyenv (Python is required for gCloud CLI)
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 pyenv install 3.9 # <-- after sourcing
 ```
