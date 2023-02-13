@@ -14,7 +14,8 @@ npm install --global pure-prompt
 
 ```bash
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-pyenv install 3.9 # after sourcing
+# after sourcing 
+pyenv install 3.9 
 ```
 
 #### .zshrc
