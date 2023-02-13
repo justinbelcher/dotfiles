@@ -9,13 +9,12 @@ There are lots of Node version managers, but you're probably best off installing
 #### Install deps
 
 ```bash
+# pure prompt
 npm install --global pure-prompt
-```
 
-```bash
+# pyenv
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-# after sourcing 
-pyenv install 3.9 
+pyenv install 3.9 # <-- after sourcing
 ```
 
 #### .zshrc
