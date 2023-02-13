@@ -31,20 +31,21 @@ autoload -U compinit; compinit
 # change directory without cd
 setopt auto_cd
 
-# vs code
-path+=("/Applications/Visual\ Studio Code.app/Contents/Resources/app/bin")
+# pure prompt
+fpath+=("$HOME/.zsh/pure")
+autoload -U promptinit; promptinit
+prompt pure
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-# pure prompt
-fpath+=("$HOME/.zsh/pure")
-autoload -U promptinit; promptinit
-prompt pure
-```
+# vs code
+path+=("/Applications/Visual\ Studio Code.app/Contents/Resources/app/bin")
+
 
 # gCloud CLI
 if [ -f '/Users/justinbelcher/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/justinbelcher/google-cloud-sdk/path.zsh.inc'; fi
 if [ -f '/Users/justinbelcher/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/justinbelcher/google-cloud-sdk/completion.zsh.inc'; fi
+```
