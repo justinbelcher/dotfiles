@@ -20,4 +20,10 @@
 ```bash
 brew tap homebrew/cask-fonts
 brew install --cask font-jetbrains-mono-nerd-font
+brew install jandedobbeleer/oh-my-posh/oh-my-posh
+```
+
+# .bashrc
+```bash
+eval "$(oh-my-posh init bash --config $(brew --prefix oh-my-posh)/themes/hotstick.minimal.omp.json)"
 ```
