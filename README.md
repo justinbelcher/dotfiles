@@ -1,50 +1,23 @@
-# New machine configuration
-
-For a long time I've used heavyweight utilities like [prezto](https://github.com/sorin-ionescu/prezto) to configure my development environment, but now that macOS ships with a reasonable install of Zsh by default I've been seeking something more lightweight. This is my current approach. 
-
-#### Install Node/NPM
-
-There are lots of Node version managers, but you're probably best off installing Node with its [official installer](https://nodejs.org/en/download/). Just make sure you configure npm prefix with `npm config set prefix ~/.npm` to avoid needing `sudo` for installs. 
-
-#### Install other deps
-
-```bash
-# pure prompt
-npm install --global pure-prompt
-
-# pyenv (Python is required for gCloud CLI)
-git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-pyenv install 3.9 # <-- after sourcing
+# IDE: User settings.json
+```json
+{
+    "window.zoomLevel": 0.75,
+    "workbench.navigationControl.enabled": false,
+    "workbench.layoutControl.enabled": false,
+    "window.menuBarVisibility": "compact",
+    "workbench.colorTheme": "Framer Syntax",
+    "editor.formatOnPaste": true,
+    "editor.minimap.enabled": false,
+    "editor.fontFamily": "'JetBrainsMono NF', monospace",
+    "editor.fontSize": 13,
+    "editor.tabSize": 2,
+    "terminal.integrated.fontFamily": "'JetBrainsMono NF', monospace",
+    "terminal.integrated.fontSize": 13,
+}
 ```
 
-#### .zshrc
-
+# Brew deps
 ```bash
-path+=("/bin")
-path+=("/usr/bin")
-path+=("/usr/local/bin")
-path+=("$HOME/.npm/bin")
-
-# autocomplete
-autoload -U compinit; compinit
-
-# change directory without cd
-setopt auto_cd
-
-# pure prompt
-fpath+=("$HOME/.zsh/pure")
-autoload -U promptinit; promptinit
-prompt pure
-
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-# vs code
-path+=("/Applications/Visual\ Studio Code.app/Contents/Resources/app/bin")
-
-# gCloud CLI
-if [ -f '/Users/justinbelcher/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/justinbelcher/google-cloud-sdk/path.zsh.inc'; fi
-if [ -f '/Users/justinbelcher/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/justinbelcher/google-cloud-sdk/completion.zsh.inc'; fi
+brew tap homebrew/cask-fonts
+brew install --cask font-jetbrains-mono-nerd-font
 ```
