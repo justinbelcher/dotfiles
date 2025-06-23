@@ -18,8 +18,7 @@
 
 # Brew deps
 ```bash
-brew tap homebrew/cask-fonts
-brew install --cask font-jetbrains-mono-nerd-font
+brew install font-jetbrains-mono-nerd-font
 brew install jandedobbeleer/oh-my-posh/oh-my-posh
 ```
 
